@@ -17,7 +17,7 @@ echo -e "\e[34mDownloading frontend content\e[0m"
 curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip &>>$(log_file)
 
 echo -e "\e[34mExtracting downloaded content\e[0m"
-cd /usr/share/nginx/html &>>$(log_file)
+cd /usr/share/nginx/html
 unzip /tmp/frontend.zip &>>$(log_file)
 
 echo -e "\e[34mCopying Nginx Config for Roboshop\e[0m"
