@@ -18,7 +18,7 @@ cd /usr/share/nginx/html
 unzip /tmp/frontend.zip
 
 echo -e "\e[34mCopying Nginx Config for Roboshop\e[0m"
-cp configs/nginx-roboshop.conf /etc/nginx/default.d/roboshop.conf
+cp /home/centos/Roboshop-project/configs/nginx-roboshop.conf /etc/nginx/default.d/roboshop.conf
 
 echo -e "\e[34mRestart nginx\e[0m"
 systemctl restart nginx
