@@ -54,7 +54,7 @@ NODEJS() {
   status_check $?
 
   print_head "Copying SystemD Service file"
-  cp configs/${component}.service /etc/systemd/system/${component}.service &>>${log_file}
+  cp ${code_dir}/configs/${component}.service /etc/systemd/system/${component}.service &>>${log_file}
   status_check $?
 
   print_head "Reload SystemD"
