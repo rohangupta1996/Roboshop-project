@@ -68,10 +68,12 @@ NODEJS() {
   print_head "Starting Catalogue"
   systemctl start ${component} &>>${log_file}
   status_check $?
+  }
 
-  print_head "Copying Mongodb repo file"
-  cp ${code_dir}/configs/mongodb.repo /etc/yum.repos.d/mongo.repo &>>${log_file}
-  status_check $?
+  schema_setup() {
+    print_head "Copying Mongodb repo file"
+    cp ${code_dir}/configs/mongodb.repo /etc/yum.repos.d/mongo.repo &>>${log_file}
+    status_check $?
 
     print_head "Installing mongo client"
     yum install mongodb-org-shell -y &>>${log_file}
