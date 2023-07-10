@@ -1,10 +1,7 @@
 source Common.sh
 print_head "Installing Nginx"
 yum install nginx -y &>>${log_file}
-if [ $? -eq 0 ]: then
-  echo Success
-  else
-  echo Failure
+
 print_head "Enabling nginx
 systemctl enable nginx &>>${log_file}
 check_status $?
