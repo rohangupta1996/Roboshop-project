@@ -2,11 +2,11 @@ source Common.sh
 print_head "Installing Nginx"
 yum install nginx -y &>>${log_file}
 
-print_head "Enabling nginx
+print_head "Enabling nginx"
 systemctl enable nginx &>>${log_file}
 status_check $?
 
-print_head "Enabling nginx"
+print_head "Starting nginx"
 systemctl start nginx &>>${log_file}
 status_check $?
 
@@ -27,6 +27,7 @@ print_head "Copying Nginx Config for Roboshop"
 cp ${code_dir}/configs/nginx-roboshop.conf /etc/nginx/default.d/roboshop.conf &>>${log_file}
 status_check $?
 
-print_head "restart nginx"
+print_head " Restart nginx"
 systemctl restart nginx &>>${log_file}
 status_check $?
+
