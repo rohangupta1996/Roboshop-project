@@ -40,7 +40,7 @@ NODEJS() {
   rm -rf /app/* &>>${log_file}
   status_check $?
 
-  print_head "Downloading setup"
+  print_head "Downloading app content"
   curl -o /tmp/${component}.zip https://roboshop-artifacts.s3.amazonaws.com/${component}.zip &>>${log_file}
   status_check $?
   cd /app
@@ -61,11 +61,11 @@ NODEJS() {
   systemctl daemon-reload &>>${log_file}
   status_check $?
 
-  print_head "Enabling Catalogue"
+  print_head "Enabling ${component}"
   systemctl enable ${component} &>>${log_file}
   status_check $?
 
-  print_head "Starting Catalogue"
+  print_head "Starting ${component}"
   systemctl start ${component} &>>${log_file}
   status_check $?
   }
