@@ -1,6 +1,5 @@
 source Common.sh
 
 component=user
+schema_type="mongodb"
 NODEJS
-schema_setup
-
