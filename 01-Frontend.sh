@@ -8,7 +8,7 @@ status_check $?
 
 print_head "Starting nginx "
 systemctl start nginx &>>${log_file}
-status_check $? 
+status_check $?
 
 print_head "Removing old content"
 rm -rf /usr/share/nginx/html/* &>>${log_file}

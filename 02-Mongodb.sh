@@ -13,6 +13,7 @@ print_head " Updating mongodb listen address"
 sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
 status_check $?
 
+
 print_head " Enabling mongodb"
 systemctl enable mongod &>>${log_file}
 status_check $?

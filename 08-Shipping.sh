@@ -9,4 +9,4 @@ component = shipping
 schema_type="mysql"
 java
 
-# jab execute karte hai -- bash mysql.sh rohan123   --matlb argument $1 ki value rohan123 hai
+# jab execute karte hai --   bash mysql.sh rohan123   --matlb argument $1 ki value rohan123 hai
